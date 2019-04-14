@@ -18,32 +18,32 @@ public class HardGridWorldLauncher {
 	private static boolean visualizeInitialGridWorld = true; //Loads a GUI with the agent, walls, and goal
 	
 	//runValueIteration, runPolicyIteration, and runQLearning indicate which algorithms will run in the experiment
-	private static boolean runValueIteration = true; 
-	private static boolean runPolicyIteration = true;
+	private static boolean runValueIteration = false; 
+	private static boolean runPolicyIteration = false;
 	private static boolean runQLearning = true;
 	
 	//showValueIterationPolicyMap, showPolicyIterationPolicyMap, and showQLearningPolicyMap will open a GUI
 	//you can use to visualize the policy maps. Consider only having one variable set to true at a time
 	//since the pop-up window does not indicate what algorithm was used to generate the map.
-	private static boolean showValueIterationPolicyMap = true; 
-	private static boolean showPolicyIterationPolicyMap = true;
+	private static boolean showValueIterationPolicyMap = false; 
+	private static boolean showPolicyIterationPolicyMap = false;
 	private static boolean showQLearningPolicyMap = true;
 	
-	private static Integer MAX_ITERATIONS = 100;
+	private static Integer MAX_ITERATIONS = 1000;
 	private static Integer NUM_INTERVALS = 100;
 
 	protected static int[][] userMap = new int[][] { 
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-										{ 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-										{ 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0},
-										{ 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0},
-										{ 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0},
-										{ 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-										{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},};
+										{ 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0},
+										{ 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0},
+										{ 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0},
+										{ 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0},
+										{ 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+										{ 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+										{ 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0},
+										{ 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0},
+										{ 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0},
+										{ 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0},
+										{ 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},};
 
 //	private static Integer mapLen = map.length-1;
 
